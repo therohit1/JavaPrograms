@@ -75,6 +75,7 @@ public class Main
 		                System.out.println("Temperature in celsisus : " + fahrenheit1);
 		                break ;
 		                
+				// Sum of digits of a number
 		    case 6 :    System.out.println("Enter a number.");
 		                int num2 = sc.nextInt();
 		                int sum = 0 , rem2 = 0;
@@ -86,7 +87,8 @@ public class Main
 		                System.out.println("Sum of Digits : " + sum);
 		                break ; 
 		                
-		    case 7 :    System.out.println("Count odd numbers from the given range.");
+				// Odd numbers from given range
+		    case 7 :    System.out.println("Odd numbers from the given range.");
 		                int number = sc.nextInt();
 		                for(int i = 0; i<=number; i++){
 		                    if (i % 2 != 0){
