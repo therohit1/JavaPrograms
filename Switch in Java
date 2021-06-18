@@ -1,0 +1,99 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter choice : ");
+		System.out.println("1. Arithmatic Operations. ");
+		System.out.println("2. Check Armstrong Number or not as well as Print them from given range. ");
+		System.out.println("3. Reverse of a number and Check Pallindrome or not. ");
+		System.out.println("4. Fahrenheit to Celsisus. ");
+		System.out.println("5. Celsisus to Fahrenheit. ");
+		System.out.println("6. Sum of Digits. ");
+		System.out.println("7. Count even and odd numbers from the given range.");
+		
+		int n = sc.nextInt();
+		switch(n)
+		{               // Arithmatic Operations.
+		    case 1 :    System.out.println("Enter 2 numbers.");
+		                int a = sc.nextInt();
+		                int b = sc.nextInt();
+		                System.out.println("Addition of 2 numbers : " + (a + b));
+		                System.out.println("Subtraction of 2 numbers : " + (a - b));
+		                System.out.println("Mulitplication of 2 numbers : " + (a * b));
+		                System.out.println("Division of 2 numbers : " + (a / b));
+		                System.out.println("Modulo of 2 numbers : " + (a % b));
+		                break ;
+		                
+		                // Check Armstrong Number or not as well as Print them from given range.
+		    case 2 :    System.out.println("Enter a number.");
+		                int num = sc.nextInt(); 
+		                int rem, rev=0 ,tmp=num ;
+		                while(num != 0){
+		                    rem = num % 10;
+		                    rev = rev  + (rem * rem * rem);
+		                    num /= 10;
+		                }
+		                if (tmp == rev){
+		                    System.out.println("Given number is Armstrong number !");
+		                }
+		                else{
+		                    System.out.println("Given number is not Armstrong number!");
+		                }
+		                break ;
+		                
+		                // Reverse of a number and Check Pallindrome or not.
+		    case 3 :    System.out.println("Enter a number.");
+		                int num1 = sc.nextInt();
+		                int rem1, rev1=0 ,tmp1=num1 ;
+		                while(num1 != 0){
+		                    rem1 = num1 % 10;
+		                    rev1 = rev1 * 10 + rem1 ;
+		                    num1 /= 10;
+		                }
+		                System.out.println("Reverse of a number : " + rev1);
+		                if (tmp1 == rev1){
+		                    System.out.println("Given number is Pallindrome number !");
+		                }
+		                else{
+		                    System.out.println("Given number is not Pallindrome number!");
+		                }
+		                break ;
+		                
+		                // Fahrenheit to Celsisus.
+		    case 4 :    System.out.println("Enter temperature in Fahrenheit.");
+		                float fahrenheit = sc.nextFloat();
+		                float celsisus = (fahrenheit - 32) * 5/9 ;
+		                System.out.println("Temperature in celsisus : " + celsisus);
+		                break ;
+		                
+		                // Celsisus to Fahrenheit.
+		    case 5 :    System.out.println("Enter temperature in celsisus.");
+		                float celsisus1 = sc.nextFloat();
+		                float fahrenheit1 = (celsisus1 * 9/5) + 32 ;
+		                System.out.println("Temperature in celsisus : " + fahrenheit1);
+		                break ;
+		                
+		    case 6 :    System.out.println("Enter a number.");
+		                int num2 = sc.nextInt();
+		                int sum = 0 , rem2 = 0;
+		                while(num2 != 0){
+		                    rem2 = num2 % 10;
+		                    sum = sum + rem2 ;
+		                    num2 /= 10;
+		                }
+		                System.out.println("Sum of Digits : " + sum);
+		                break ; 
+		                
+		    case 7 :    System.out.println("Count odd numbers from the given range.");
+		                int number = sc.nextInt();
+		                for(int i = 0; i<=number; i++){
+		                    if (i % 2 != 0){
+		                        System.out.print(i+" ");
+		                    }
+		                }
+		                break ;
+		}
+	}
+}
