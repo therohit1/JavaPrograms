@@ -1,0 +1,42 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		Scanner sc = new Scanner(System.in);
+		
+		// taking array size
+		int size = sc.nextInt();
+		
+		// declaring an array of size 
+		System.out.println("Enter array elements : ");
+		int []arr = new int[size];
+		
+		// taking input for the array
+		for(int k = 0; k<size; k++){
+		    arr[k] = sc.nextInt();
+		}
+		
+		System.out.print("Array before : ");
+		for(int n:arr){
+		    System.out.print(n+" ");
+		}
+		
+		// insertion sort
+		for(int i = 0; i<size; i++){
+		    int current_element = arr[i];
+		    int position = i-1;
+		    while((position > -1 && arr[position]>current_element)){
+		        arr[position+1] = arr[position];
+		        position -=1; 
+		    }
+		    arr[position+1] = current_element;
+		 }
+		// Printing array elements after sorting.
+		 System.out.print("Array before : ");
+		 for(int num: arr){
+		     System.out.print(num+" ");
+		 }
+	}
+}
