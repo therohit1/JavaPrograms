@@ -3,7 +3,7 @@ public class Main
 {
   public static void main (String[]args)
   {
-    System.out.println ("Enter size you want.");
+    System.out.println ("Enter a number.");
     Scanner sc = new Scanner (System.in);
 
     // Enter size.
